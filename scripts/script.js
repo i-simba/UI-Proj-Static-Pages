@@ -124,7 +124,7 @@ function loadProducts () {
             </div>
 
             <div class="ProdShow">
-
+            <img src="https://content.presentermedia.com/files/clipart/00002000/2285/under_construction_pc_800_wht.jpg" style="margin-left: 100px;"></img>
             </div>
         </div>
         `;
@@ -150,24 +150,27 @@ document.getElementById("Products").onclick = function () {
 
 document.getElementById("About").onclick = function () {
     body.innerHTML = `
-        <div class="Center" style="margin-top: 300px;">
-            TBD 'About'
+        <div class="Center" style="margin-top: 100px;">
+            TBD 'About'<br></br>
+            <img src="https://st3.depositphotos.com/6723736/12729/v/450/depositphotos_127297410-stock-illustration-complexion-is-bad-dog.jpg"></img>
         </div>
         `;
 }
 
 document.getElementById("RegLog").onclick = function () {
     body.innerHTML = `
-        <div class="Center" style="margin-top: 300px;">
-            TBD 'Register/Log In'
+        <div class="Center" style="margin-top: 100px;">
+            TBD 'Register/Log In'<br></br>
+            <img src="https://media.istockphoto.com/id/1331362780/vector/cute-baby-monkey-cartoon-confused.jpg?s=612x612&w=0&k=20&c=UKVjCus5ykDPtNJHdMQLUJCOBtZfNv7GJlqyRrIdSwo="></img>
         </div>
         `;
 }
 
 document.getElementById("Checkout").onclick = function () {
     body.innerHTML = `
-        <div class="Center" style="margin-top: 300px;">
-            TBD 'Cart'
+        <div class="Center" style="margin-top: 100px;">
+            TBD 'Cart'<br></br>
+            <img src="https://png.pngtree.com/png-clipart/20220705/ourmid/pngtree-the-cat-s-confused-png-image_5683652.png"></img>
         </div>
         `;
 }
