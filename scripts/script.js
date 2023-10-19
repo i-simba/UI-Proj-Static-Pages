@@ -12,13 +12,13 @@ function loadHeader () {
                     <div class="Container">
                         <div class="Wrapper">
                             <div class="Left">
-                                <a class="MenuLink">
+                                <a id="Home" class="MenuLink">
                                     <div class="Menu">Home</div>
                                 </a>
-                                <a class="MenuLink">
+                                <a id="Products" class="MenuLink">
                                     <div class="Menu">Products</div>
                                 </a>
-                                <a class="MenuLink">
+                                <a id="About" class="MenuLink">
                                     <div class="Menu">About</div>
                                 </a>
                             </div>
@@ -35,12 +35,12 @@ function loadHeader () {
 
                 <div class="Right">
                     <a class="MenuLink">
-                        <div class="Menu Center">
+                        <div id="RegLog" class="Menu Center">
                             Register/Sign In
                         </div>
                     </a>
                     </a class="MenuLink">
-                        <div class="Cart">
+                        <div id="Checkout" class="Cart">
                             <svg class="CartIco">
                                 <path d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12zm-7-8c-1.66 0-3-1.34-3-3H7c0 2.76 2.24 5 5 5s5-2.24 5-5h-2c0 1.66-1.34 3-3 3z"></path>
                             </svg>
@@ -52,7 +52,7 @@ function loadHeader () {
         `;
 }
 
-function loadBody () {
+function loadHome () {
     return `
         <div class="SlideContainer">
             
@@ -63,7 +63,7 @@ function loadBody () {
             <div class="InfoContainer">
                 <h1 class="Title">Seasonal Fruits</h1>
                 <p class="Description">Shop from our wide variety of in-season fruits</p>
-                <button class="Button">SHOP NOW</button>
+                <button id="btn" class="Button" onclick="prodRef()">SHOP NOW</button>
             </div>
 
             <div class="BottomSlide">
@@ -94,5 +94,80 @@ function loadBody () {
         `;
 }
 
-document.getElementById("body").innerHTML = loadBody();
-document.getElementById("header").innerHTML = loadHeader();
+function loadProducts () {
+    return `
+        <div class="ProdContainer">
+            <div class="FilterShelfContainer">
+                <div class="FilterLabelContainer">
+                    <label class="FilterLable">FILTERS</label>
+                </div>
+                <div class="FilterShelf">
+                    <label class="FilterName">
+                        <input type="checkbox"> Organic
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Organic
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Organic
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Organic
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Organic
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Organic
+                    </label>
+                </div>
+            </div>
+
+            <div class="ProdShow">
+
+            </div>
+        </div>
+        `;
+}
+
+function prodRef () {
+    body.innerHTML = loadProducts();
+}
+
+let header = document.getElementById("header");
+let body = document.getElementById("body");
+
+header.innerHTML = loadHeader();
+body.innerHTML = loadHome();
+
+document.getElementById("Home").onclick = function () {
+    body.innerHTML = loadHome();
+}
+
+document.getElementById("Products").onclick = function () {
+    body.innerHTML = loadProducts();
+}
+
+document.getElementById("About").onclick = function () {
+    body.innerHTML = `
+        <div class="Center" style="margin-top: 300px;">
+            TBD 'About'
+        </div>
+        `;
+}
+
+document.getElementById("RegLog").onclick = function () {
+    body.innerHTML = `
+        <div class="Center" style="margin-top: 300px;">
+            TBD 'Register/Log In'
+        </div>
+        `;
+}
+
+document.getElementById("Checkout").onclick = function () {
+    body.innerHTML = `
+        <div class="Center" style="margin-top: 300px;">
+            TBD 'Cart'
+        </div>
+        `;
+}
