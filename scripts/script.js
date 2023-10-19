@@ -96,6 +96,18 @@ function loadHome () {
 
 function loadProducts () {
     return `
+        <div class="SortContainer">
+            <select name="sort" id="sort" class="SortBox">
+                <option value="" disabled selected>Sort By</option>
+                <option value="">Price: High to Low</option>
+                <option value="">Price: Low to High</option>
+                <option value="">Alphabetical: A - Z</option>
+                <option value="">Alphabetical: Z - A</option>
+                <option value="">New Arrivals</option>
+                <option value="">Best Sellers</option>
+            </select>
+        </div>
+
         <div class="ProdContainer">
             <div class="FilterShelfContainer">
                 <div class="FilterLabelContainer">
@@ -123,8 +135,20 @@ function loadProducts () {
                 </div>
             </div>
 
-            <div class="ProdShow">
-            <img src="https://content.presentermedia.com/files/clipart/00002000/2285/under_construction_pc_800_wht.jpg" style="margin-left: 100px;"></img>
+            <div id="ProdBox" class="Products">
+                
+            </div>
+        </div>
+        `;
+}
+
+function addProd() {
+    return `
+        <div id="prodHover" class="Product">
+            <img class="ProdImg" src="images/FruitPlaceholder.png"></img>
+            <div class="ProdInfo">
+                <label class="ProdName">Fruit Name</label>
+                <label class="ProdPrice">Price: $00.00</label>
             </div>
         </div>
         `;
@@ -132,6 +156,9 @@ function loadProducts () {
 
 function prodRef () {
     body.innerHTML = loadProducts();
+    for (let i = 0; i < 21; i ++) {
+        document.getElementById("ProdBox").innerHTML += addProd();
+    }
 }
 
 let header = document.getElementById("header");
@@ -146,6 +173,9 @@ document.getElementById("Home").onclick = function () {
 
 document.getElementById("Products").onclick = function () {
     body.innerHTML = loadProducts();
+    for (let i = 0; i < 21; i ++) {
+        document.getElementById("ProdBox").innerHTML += addProd();
+    }
 }
 
 document.getElementById("About").onclick = function () {
