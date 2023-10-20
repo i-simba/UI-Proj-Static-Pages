@@ -7,7 +7,14 @@ function loadHeader () {
 
                 <div class="Left">
                     <a class="MenuLink">
-                        <h1 class="Logo">TBD</h1>
+                        <select id="colorPick">
+                            <option disabled selected>UI Color</option>
+                            <option value="Pink">Pink</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Gray">Cool Gray</option>
+                            <option value="Blue">Blue</option>
+                            <option value="UTSA">UTSA LOL</option>
+                        </select>
                     </a>
                     <div class="Container">
                         <div class="Wrapper">
@@ -57,14 +64,14 @@ function loadHome () {
         <div class="SlideContainer">
             
             <div class="ImageContainer">
-                <img class="Image" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/22/10/istock-683044558.jpg"></img>
+                <div class="InfoContainer">
+                    <h1 class="Title">Seasonal Fruits</h1>
+                    <p class="Description">Shop from our wide variety of in-season fruits</p>
+                    <button id="btn" class="Button" onclick="prodRef()">SHOP NOW</button>
+                </div>
             </div>
             
-            <div class="InfoContainer">
-                <h1 class="Title">Seasonal Fruits</h1>
-                <p class="Description">Shop from our wide variety of in-season fruits</p>
-                <button id="btn" class="Button" onclick="prodRef()">SHOP NOW</button>
-            </div>
+            
 
             <div class="BottomSlide">
                 <h2 class="SubTitle">Some of our Best Sellers</h2>
@@ -161,11 +168,12 @@ function prodRef () {
     }
 }
 
+
 let header = document.getElementById("header");
 let body = document.getElementById("body");
-
 header.innerHTML = loadHeader();
 body.innerHTML = loadHome();
+
 
 document.getElementById("Home").onclick = function () {
     body.innerHTML = loadHome();
@@ -203,4 +211,27 @@ document.getElementById("Checkout").onclick = function () {
             <img src="https://png.pngtree.com/png-clipart/20220705/ourmid/pngtree-the-cat-s-confused-png-image_5683652.png"></img>
         </div>
         `;
+}
+
+document.getElementById("colorPick").onchange = function () {
+    var color = document.getElementById("colorPick").value;
+
+    if (color == "Pink") {
+        document.body.style.setProperty('--main-color', '#FF7276');
+        document.body.style.setProperty('--sub-color', '#CC4448');
+    } else if (color == "Orange") {
+        document.body.style.setProperty('--main-color', '#F38630');
+        document.body.style.setProperty('--sub-color', '#FA6900');
+    } else if (color == "Gray") {
+        document.body.style.setProperty('--main-color', '#506266');
+        document.body.style.setProperty('--sub-color', '#7B8F8A');
+        document.body.style.setProperty('--text-color', '#FFFFFF');
+    } else if (color == "Blue") {
+        document.body.style.setProperty('--main-color', '#B2D9F7');
+        document.body.style.setProperty('--sub-color', '#487AA1');
+    } else if (color == "UTSA") {
+        document.body.style.setProperty('--main-color', '#0C2340');
+        document.body.style.setProperty('--sub-color', '#F15A22');
+        document.body.style.setProperty('--text-color', '#FFFFFF');
+    }
 }

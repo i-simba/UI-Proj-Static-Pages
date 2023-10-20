@@ -1,10 +1,25 @@
+:root {
+    --main-color: #FF7276;
+    --sub-color: #cc4448;
+    --text-color: #000000;
+
+    /*--main-color: #f38630;
+    --sub-color: #fa6900;*/
+
+    /*--main-color: #506266;
+    --sub-color: #7b8f8a;*/
+
+    /*--main-color: #b2d9f7;
+    --sub-color: #487aa1;*/
+}
+
 .Container {
     position: sticky;
     top: 0;
     z-index: 999;
     height: 10%;
     width: 100%;
-    background-color: #FABBBB;
+    background-color: var(--main-color);
 }
 
 .Wrapper {
@@ -62,12 +77,13 @@
     width: 24px;
     height: 24px;
     transition: 0.15s;
+    fill: var(--text-color);
 }
 
 .CartIco:hover {
     fill: white;
-    background-color: #cc7777;
-    border-color: #cc7777;
+    background-color: var(--sub-color);
+    border-color: var(--sub-color);
     border-radius: 5px;
     transform: scale(1.3);
     cursor: pointer;
@@ -95,6 +111,7 @@
 }
 
 .Menu {
+    color: var(--text-color);
     font-size: 16px;
     cursor: pointer;
     margin-left: 20px;

@@ -97,7 +97,7 @@
     justify-content: center;
     width: 300px;
     height: 55px;
-    background-color: #fabbbb;
+    background-color: var(--sub-color);
 }
 
 .ProdName {
