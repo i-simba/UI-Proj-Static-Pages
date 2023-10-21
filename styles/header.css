@@ -1,7 +1,7 @@
 :root {
     --main-color: #FF7276;
     --sub-color: #cc4448;
-    --text-color: #000000;
+    --text-color: #FFFFFF;
 
     /*--main-color: #f38630;
     --sub-color: #fa6900;*/
@@ -11,6 +11,11 @@
 
     /*--main-color: #b2d9f7;
     --sub-color: #487aa1;*/
+}
+
+.color {
+    width: 25px;
+    height: 25px;
 }
 
 .Container {

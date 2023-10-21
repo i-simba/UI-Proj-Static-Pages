@@ -7,14 +7,10 @@ function loadHeader () {
 
                 <div class="Left">
                     <a class="MenuLink">
-                        <select id="colorPick">
-                            <option disabled selected>UI Color</option>
-                            <option value="Pink">Pink</option>
-                            <option value="Orange">Orange</option>
-                            <option value="Gray">Cool Gray</option>
-                            <option value="Blue">Blue</option>
-                            <option value="UTSA">UTSA LOL</option>
-                        </select>
+                        <div style="display: flex;">
+                            <input class="color" type="color" id="mainColor" value="#FF7276"/>
+                            <input class="color" type="color" id="subColor" value="#CC4448"/>
+                        </div>
                     </a>
                     <div class="Container">
                         <div class="Wrapper">
@@ -213,6 +209,29 @@ document.getElementById("Checkout").onclick = function () {
         `;
 }
 
+
+var mC = document.getElementById("mainColor");
+var sC = document.getElementById("subColor");
+
+mC.onchange = function () {
+    document.body.style.setProperty('--main-color', mC.value);
+}
+
+sC.onchange = function () {
+    document.body.style.setProperty('--sub-color', sC.value);
+}
+
+
+/*
+<select id="colorPick">
+                            <option disabled selected>UI Color</option>
+                            <option value="Pink">Pink</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Gray">Cool Gray</option>
+                            <option value="Blue">Blue</option>
+                            <option value="UTSA">UTSA LOL</option>
+                        </select>
+
 document.getElementById("colorPick").onchange = function () {
     var color = document.getElementById("colorPick").value;
 
@@ -235,3 +254,4 @@ document.getElementById("colorPick").onchange = function () {
         document.body.style.setProperty('--text-color', '#FFFFFF');
     }
 }
+*/
