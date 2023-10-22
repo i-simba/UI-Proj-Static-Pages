@@ -8,8 +8,8 @@ function loadHeader () {
                 <div class="Left">
                     <a class="MenuLink">
                         <div style="display: flex;">
-                            <input class="color" type="color" id="mainColor" value="#FF7276"/>
-                            <input class="color" type="color" id="subColor" value="#CC4448"/>
+                            <input class="color" type="color" id="mainColor" value="#0C2340"/>
+                            <input class="color" type="color" id="subColor" value="#F15A22"/>
                         </div>
                     </a>
                     <div class="Container">
@@ -148,8 +148,6 @@ function loadProducts () {
                 <option value="">Price: Low to High</option>
                 <option value="">Alphabetical: A - Z</option>
                 <option value="">Alphabetical: Z - A</option>
-                <option value="">New Arrivals</option>
-                <option value="">Best Sellers</option>
             </select>
         </div>
 
@@ -159,24 +157,56 @@ function loadProducts () {
                     <label class="FilterLable">FILTERS</label>
                 </div>
                 <div class="FilterShelf">
+                    <label class="FilterType">Farming Practices</label>
                     <label class="FilterName">
                         <input type="checkbox"> Organic
                     </label>
                     <label class="FilterName">
-                        <input type="checkbox"> Organic
+                        <input type="checkbox"> Non-Organic
+                    </label></br>
+                    <label class="FilterType">Fruit Type</label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Beries
                     </label>
                     <label class="FilterName">
-                        <input type="checkbox"> Organic
+                        <input type="checkbox"> Pits
                     </label>
                     <label class="FilterName">
-                        <input type="checkbox"> Organic
+                        <input type="checkbox"> Cores
                     </label>
                     <label class="FilterName">
-                        <input type="checkbox"> Organic
+                        <input type="checkbox"> Citrus
                     </label>
                     <label class="FilterName">
-                        <input type="checkbox"> Organic
+                        <input type="checkbox"> Melons
                     </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Tropical
+                    </label></br>
+                    <label class="FilterType">Weight</label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Small
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Medium
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Large
+                    </label></br>
+                    <label class="FilterType">Price</label>
+                    <label class="FilterName">
+                        $ <input class="PriceInput" type="number" min="0.01" step="0.01" placeholder="MIN">
+                    </label>
+                    <label class="FilterName">
+                        $ <input class="PriceInput" type="number" min="0.01" step="0.01" placeholder="MAX">
+                    </label></br>
+                    <label class="FilterType">MISC</label>
+                    <label class="FilterName">
+                        <input type="checkbox"> In-Season
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> On Sale
+                    </label></br>
                 </div>
             </div>
 
@@ -189,11 +219,11 @@ function loadProducts () {
 
 function addProd() {
     return `
-        <div id="prodHover" class="Product">
-            <img class="ProdImg" src="images/FruitPlaceholder.png"></img>
-            <div class="ProdInfo">
-                <label class="ProdName">Fruit Name</label>
-                <label class="ProdPrice">Price: $00.00</label>
+        <div class="card">
+            <div class="ProdImg anim"></div>
+                <div class="ProdInfo animText">
+
+                </div>
             </div>
         </div>
         `;
@@ -298,4 +328,14 @@ document.getElementById("colorPick").onchange = function () {
         document.body.style.setProperty('--text-color', '#FFFFFF');
     }
 }
+
+return `
+        <div id="prodHover" class="Product">
+            <div class="loading"></div>
+            <div class="ProdInfo">
+                <label class="ProdName">Fruit Name</label>
+                <label class="ProdPrice">Price: $00.00</label>
+            </div>
+        </div>
+        `;
 */

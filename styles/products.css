@@ -1,6 +1,13 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .ProdContainer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background-color: #f2f2f2;
@@ -23,8 +30,10 @@
 .FilterShelfContainer {
     width: 300px;
     height: 900px;
+    margin-top: 15px;
     margin-left: 3vw;
     background-color: white;
+    filter: drop-shadow(#aaaaaa 1px 5px 5px);
 }
 
 .FilterLabelContainer {
@@ -32,8 +41,10 @@
     height: 50px;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid #f2f2f2;
     margin-bottom: 25px;
+    color: var(--text-color);
+    background-color: var(--sub-color);
+    filter: drop-shadow(#aaaaaa 1px 5px 5px);
 }
 
 .FilterLabel {
@@ -49,7 +60,18 @@
 }
 
 .FilterName {
+    margin-top: 8px;
+    margin-left: 10px;
+}
 
+.FilterType {
+    color: rgb(61, 61, 61);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.PriceInput {
+    width: 75px;
 }
 
 .Products {
@@ -66,19 +88,19 @@
     display: none;
 }
 
-.Product {
+.card {
     width: 300px;
-    height: 360px;
+    height: 355px;
     margin: 25px;
-    margin-top: 0px;
-    border: 2px solid #a3a3a3;
+    margin-top: 15px;
+    border: 2px solid #cecece;
     border-radius: 5px;
     filter: drop-shadow(gray 1px 1px 3px);
     cursor: pointer;
     transition: 0.15s;
 }
 
-.Product:hover {
+.card:hover {
     opacity: 0.75;
     border-color: #d1d1d1;
     filter: drop-shadow(rgb(87, 87, 87) 1px 1px 10px);
@@ -101,10 +123,32 @@
     background-color: var(--sub-color);
 }
 
+.anim {
+    background: linear-gradient(100deg, #e0e0e0 8%, #ececec 18%, #e0e0e0 33%);
+    background-size: 200% 100%;
+    animation: 1s shine linear infinite;
+}
+
+.animText {
+    background: linear-gradient(100deg, color-mix(in srgb,var(--sub-color),#fff 70%) 8%, #ececec 18%, color-mix(in srgb,var(--sub-color),#fff 70%) 33%);
+    background-size: 200% 100%;
+    animation: 1s shine linear infinite;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
 .ProdName {
 
 }
 
 .ProdPrice {
 
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
 }
