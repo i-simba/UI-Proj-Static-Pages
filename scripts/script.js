@@ -202,11 +202,17 @@ function loadProducts () {
                     </label></br>
                     <label class="FilterType">MISC</label>
                     <label class="FilterName">
+                        <input type="checkbox"> Store Picks
+                    </label>
+                    <label class="FilterName">
+                        <input type="checkbox"> Best Sellers
+                    </label>
+                    <label class="FilterName">
                         <input type="checkbox"> In-Season
                     </label>
                     <label class="FilterName">
                         <input type="checkbox"> On Sale
-                    </label></br>
+                    </label>
                 </div>
             </div>
 
@@ -282,6 +288,7 @@ document.getElementById("Checkout").onclick = function () {
         </div>
         `;
 }
+
 
 
 var mC = document.getElementById("mainColor");
