@@ -36,7 +36,7 @@ svg {
 
 svg:hover {
     fill: #ffffff;
-    filter: drop-shadow( 0px 3px 10px rgba(255, 255, 255, 1));
+    filter: drop-shadow( 0px 3px 5px rgba(255, 255, 255, 1));
 }
 
 span {
