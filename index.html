@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits R Us</title>
+    <title>Fruits R Us | Home</title>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/body.css">
-    <link rel="stylesheet" href="styles/products.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <link rel="icon" type="image/x-icon" href="images/fruits.png"
+    <link rel="icon" type="image/x-icon" href="images/fruits.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -23,11 +22,53 @@
 <header id="header"></header>
 
 <body>
-    <div id="body"></div>
+    <div class="SlideContainer">
+            
+        <div class="ImageContainer">
+            <div class="InfoContainer">
+                <h1 class="Title">Seasonal Fruits</h1>
+                <p class="Description">Shop from our wide variety of in-season fruits</p>
+                <button id="btn" class="Button" onclick="location.href='products.html'">SHOP NOW</button>
+            </div>
+        </div>
+        
+        
+
+        <div class="BottomSlide">
+            <h2 class="SubTitle">Some of our Best Sellers</h2>
+        </div>
+        <div class="BottomInfo">
+            <div class="ProductContainer">
+                <a href="fruit.html">
+                    <img id="apples" class="ProductImage" src="https://www.starkbros.com/images/dynamic/5695-560x560-fillv.jpg"></img>
+                </a>
+                <div class="ProductNameContainer Center">
+                    <h2 class="ProductName">APPLES</h2>
+                </div>
+            </div>
+            <div class="ProductContainer">
+                <a href="fruit.html">
+                    <img id="pineapples" class="ProductImage" src="https://cdn11.bigcommerce.com/s-s80x3kh8aj/images/stencil/1280w/products/1119/1863/original__13460.1693441692.png"></img>
+                </a>
+                <div class="ProductNameContainer Center">
+                    <h2 class="ProductName">PINEAPPLES</h2>
+                </div>
+            </div>
+            <div class="ProductContainer">
+                <a href="fruit.html">
+                    <img id="oranges" class="ProductImage" src="https://www.allrecipes.com/thmb/y_uvjwXWAuD6T0RxaS19jFvZyFU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1205638014-2000-d0fbf9170f2d43eeb046f56eec65319c.jpg"></img>
+                </a>
+                <div class="ProductNameContainer Center">
+                    <h2 class="ProductName">ORANGES</h2>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </body>
 
 <footer id="footer"></footer>
 
-<script src="scripts/script.js"></script>
+<script src="scripts/head.js"></script>
 
 </html>

@@ -1,0 +1,129 @@
+.FruitContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 75px;
+    height: calc(100vh - 386px);
+}
+
+.FruitDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 675px;
+    margin-bottom: 75px;
+    border-right: 2px solid #bebebe;
+}
+
+.FruitImage {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+    overflow: hidden;
+    filter: drop-shadow(black 1px 1px 5px);
+}
+
+.FruitDescription {
+    width: 550px;
+    min-height: 100px;
+    margin-top: 10px;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+}
+
+.FruitAdd {
+    border-right: none;
+}
+
+.FruitDetails {
+    margin-left: 75px;
+}
+
+.FruitBigT {
+    color: #4d4d4d;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 250%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.FruitSmallT {
+    color: #4d4d4d;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100%;
+    margin-bottom: 5px;
+}
+
+.FruitCount {
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 75%;
+}
+
+.FruitAddContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    border-top: 2px solid #bebebe;
+}
+
+.FruitAddContainerName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+.FruitButton {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: x-large;
+    background-color: var(--sub-color);
+    border: 3px solid var(--sub-color);
+    border-radius: 10px;
+    filter: drop-shadow(gray 1px 3px 3px);
+    transition: 0.15s;
+}
+
+.FruitButton:hover {
+    background-color: color-mix(in srgb,var(--sub-color),#000000 3%);
+    border-color: color-mix(in srgb,var(--sub-color),#000000 5%);
+    transform: scale(1.03);
+    text-shadow: 1px 1px 10px white;
+}
+
+.FruitButton:active {
+    background-color: color-mix(in srgb,var(--sub-color),#000000 20%);
+    border-color: color-mix(in srgb,var(--sub-color),#000000 20%);
+    transform: scale(0.99);
+}
+
+.FruitAddToCart {
+    width: 300px;
+    height: 75px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.FruitAddSub {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.anim {
+    background: linear-gradient(100deg, #e0e0e0 8%, #ececec 18%, #e0e0e0 33%);
+    background-size: 200% 100%;
+    animation: 1s shine linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits R Us | Fruit</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/fruit.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="icon" type="image/x-icon" href="images/fruits.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+        margin: 0;
+        font-family: 'Urbanist', sans-serif;
+        }
+    </style>
+</head>
+
+<header id="header"></header>
+
+<body>
+    <div class="FruitContainer">
+        <div class="FruitDetailsContainer">
+            <img id="fruitImg" class="FruitImage anim"></img></br></br>
+            <label class="FilterType">&emsp;Description</label>
+            <div class="FruitDescription anim">
+                
+            </div>
+        </div>
+        <div class="FruitDetailsContainer FruitAdd">
+            <div class="FruitDetailsContainer FruitDetails FruitAdd">
+                <div class="FruitAddContainerName anim">
+                    <label class="FruitBigT"></label>
+                    <label class="FruitSmallT"></label>
+                    <label class="FruitSmallT"></label>
+                    <label class="FruitSmallT"></label>
+                </div>
+                <div class="FruitAddContainer">
+                    <button id="sub" class="FruitAddSub FruitButton">-</button>
+                    <button class="FruitAddToCart FruitButton">Add to Cart</br>
+                        <label id="count" class="FruitCount">0</label>
+                    </button>
+                    <button id="add" class="FruitAddSub FruitButton">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer id="footer"></footer>
+
+<script src="scripts/head.js"></script>
+<script src="scripts/fruit.js"></script>
+
+</html>
